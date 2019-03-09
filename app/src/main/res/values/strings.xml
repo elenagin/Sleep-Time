@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Sleep Time</string>
+    <string name="wakeText">Wake up at: </string>
+    <string name="button1">Sleep at:</string>
+    <string name="sleepText">If I sleep at:</string>
+    <string name="button2">NOW</string>
+    <string name="button3">Selected Time:</string>
+    <string name="toWakeButton">To wake up at:</string>
+    <string name="addReminder">Add reminder</string>
+    <string name="time">12:00pm</string>
+    <string name="addAlarmMorning">add alarm in the morning</string>
+    <string name="addAlarm">Add alarm</string>
+    <string name="bothButton">Do both</string>
+    <string name="selectedTimeB">Selected Button</string>
+    <string name="similarTimeB">Similar Button</string>
+    <string name="remindMeTitle">Remind me to go to bed at this time</string>
+    <string name="twoDots"> : </string>
+</resources>
