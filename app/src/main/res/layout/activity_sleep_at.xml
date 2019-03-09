@@ -1,0 +1,116 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bedT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:text="@string/toWakeButton"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/timeToWake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bedT"
+            android:text="@string/time"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/timeToWake"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/sleepT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginTop="16dp"
+            android:text="@string/button1"
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/timeToSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sleepT"
+            android:text="@string/time"
+            android:textSize="60sp" />
+
+        <Button
+            android:id="@+id/alarmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeToSleep"
+            android:layout_margin="4dp"
+            android:background="@color/colorPrimaryDarkDifferent"
+            android:text="@string/addAlarmMorning"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/alarmButton"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/remindT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/remindMeTitle"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remindT"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimaryDarkDifferent"
+            android:text="@string/addReminder"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/reminder"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/both"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line3"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimaryDarkDifferent"
+            android:text="@string/bothButton"
+            android:textSize="35sp" />
+
+    </RelativeLayout>
+</ScrollView>

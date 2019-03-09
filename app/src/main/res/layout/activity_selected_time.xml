@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sleepT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:text="@string/wakeText"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/timeToSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sleepT"
+            android:layout_margin="16dp"
+            android:text="@string/time"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/timeToSleep"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/remindT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:text="@string/addAlarm"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remindT"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/alarmCurTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/colorPrimaryDarkDifferent"
+                android:text="@string/selectedTimeB"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/alarmSimTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/colorPrimaryDarkDifferent"
+                android:text="@string/similarTimeB"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

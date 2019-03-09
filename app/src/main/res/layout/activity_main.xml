@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:text="@string/wakeText"
+            android:textSize="30sp" />
+
+        <TimePicker
+            android:id="@+id/clock1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wake"
+            android:theme="@style/TimePickerTheme"
+            android:timePickerMode="spinner"
+            tools:targetApi="lollipop" />
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clock1"
+            android:layout_margin="4dp"
+            android:background="@color/colorPrimaryDarkDifferent"
+            android:gravity="center"
+            android:onClick="sleepAt"
+            android:text="@string/button1"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/button1"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_margin="4dp"
+            android:text="@string/sleepText"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sleep"
+            android:layout_margin="4dp"
+            android:background="@color/colorPrimaryDarkDifferent"
+            android:onClick="selectedTime"
+            android:text="@string/button2"
+            android:textSize="25sp" />
+
+        <TimePicker
+            android:id="@+id/clock2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button2"
+            android:layout_marginTop="16dp"
+            android:theme="@style/TimePickerTheme"
+            android:timePickerMode="spinner"
+            tools:targetApi="lollipop" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clock2"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimaryDarkDifferent"
+            android:onClick="selectedTime"
+            android:text="@string/button3"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+</ScrollView>
