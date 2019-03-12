@@ -26,16 +26,12 @@ public class MainActivity extends AppCompatActivity {
         wakeTimePicker = findViewById(R.id.clock1);
         hour = wakeTimePicker.getCurrentHour();
         minute = wakeTimePicker.getCurrentMinute();
-        if (hour != 12)
-            hour -= 12;
-
         if (hour <= 12)
             AM_PM = "AM";
-
-        else {
+        else
             AM_PM = "PM";
-        }
-
+        if (hour != 12)
+            hour -= 12;
         extras.putString("time", getTime(1));
         extras.putString("AM_PM", AM_PM);
         extras.putInt("hour", hour);
@@ -52,23 +48,40 @@ public class MainActivity extends AppCompatActivity {
 
     private String getTime(int view) {
         TimePicker wakeTimePicker;
-        String AM_PM;
         int hour, minute;
-
         if (view == 1)
             wakeTimePicker = findViewById(R.id.clock1);
         else
             wakeTimePicker = findViewById(R.id.clock2);
-
         hour = wakeTimePicker.getCurrentHour();
         minute = wakeTimePicker.getCurrentMinute();
-        if (hour <= 12)
-            AM_PM = "AM";
-
-        else {
-            AM_PM = "PM";
-            hour -= 12;
+        switch (hour) {
+            case 0:
+                return NumberFormat.getInstance().format(12).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" AM");
+            case 12:
+                return NumberFormat.getInstance().format(12).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" PM");
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+            case 22:
+            case 23:
+            case 24:
+                return NumberFormat.getInstance().format(hour - 12).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" PM");
+            default:
+                return NumberFormat.getInstance().format(hour).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" AM");
         }
-        return NumberFormat.getInstance().format(hour).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" ").concat(AM_PM);
+        /*if ((hour < 12)&&(hour>0))
+            return NumberFormat.getInstance().format(hour).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" AM");
+        else if (hour > 12)
+            return NumberFormat.getInstance().format(hour - 12).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" PM");
+        else if (hour == 2)
+            return NumberFormat.getInstance().format(hour).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(minute)).concat(" PM");
+    */
     }
 }

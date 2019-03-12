@@ -40,28 +40,21 @@ public class SleepAtActivity extends AppCompatActivity {
 
     private void displayTime(String time, int hour, int min, String am_pm) {
         TextView setWake, setSleep;
-
         setWake = findViewById(R.id.timeToWake);
         setSleep = findViewById(R.id.timeToSleep);
         setWake.setText(time);
-        hour -= 4;
-        min -= 30;
-
+        /*hour -= 5;
         if (hour > 12)
             hour -= 12;
-
         if (hour < 0)
             hour += 12;
-
         if (min > 60) {
             min -= 60;
             hour += 1;
         } else if (min < 0) {
             min += 60;
             hour -= 1;
-        }
-        setSleep.setText(am_pm);
-
-//        setSleep.setText(NumberFormat.getInstance().format(hour).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(min).concat(am_pm)));
+        }*/
+        setSleep.setText(NumberFormat.getInstance().format(hour).concat(" ").concat(getString(R.string.twoDots)).concat(" ").concat(new DecimalFormat("00").format(min).concat(" ").concat(am_pm)));
     }
 }

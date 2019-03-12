@@ -35,10 +35,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/clock1"
             android:layout_margin="4dp"
-            android:background="@color/colorPrimaryDarkDifferent"
+            android:background="@android:color/holo_red_light"
             android:gravity="center"
             android:onClick="sleepAt"
             android:text="@string/button1"
+            android:padding="6dp"
             android:textSize="25sp" />
 
         <TextView
@@ -65,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/sleep"
             android:layout_margin="4dp"
-            android:background="@color/colorPrimaryDarkDifferent"
+            android:background="@android:color/holo_red_light"
             android:onClick="selectedTime"
             android:text="@string/button2"
             android:textSize="25sp" />
@@ -86,9 +87,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/clock2"
             android:layout_marginBottom="16dp"
-            android:background="@color/colorPrimaryDarkDifferent"
+            android:background="@android:color/holo_red_light"
             android:onClick="selectedTime"
             android:text="@string/button3"
+            android:padding="6dp"
             android:textSize="25sp" />
 
     </RelativeLayout>

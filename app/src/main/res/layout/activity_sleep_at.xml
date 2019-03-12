@@ -59,7 +59,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/timeToSleep"
             android:layout_margin="4dp"
-            android:background="@color/colorPrimaryDarkDifferent"
+            android:background="@android:color/holo_red_light"
+            android:padding="6dp"
             android:text="@string/addAlarmMorning"
             android:textSize="25sp" />
 
@@ -89,7 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/remindT"
             android:layout_margin="16dp"
-            android:background="@color/colorPrimaryDarkDifferent"
+            android:background="@android:color/holo_red_light"
+            android:padding="6dp"
             android:text="@string/addReminder"
             android:textSize="25sp" />
 
@@ -108,7 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/line3"
             android:layout_margin="16dp"
-            android:background="@color/colorPrimaryDarkDifferent"
+            android:background="@android:color/holo_red_light"
+            android:padding="6dp"
             android:text="@string/bothButton"
             android:textSize="35sp" />
 
